@@ -8,6 +8,14 @@ public class Usuario {
 	private boolean logado;
 	
 	
+	public boolean isLogado() {
+		return logado;
+	}
+
+	public void setLogado(boolean logado) {
+		this.logado = logado;
+	}
+
 	public Usuario(){
 		tweets = new ArrayList<Tweet>();
 	}
@@ -45,7 +53,7 @@ public class Usuario {
 			System.out.println("~ Deslogado! ~");
 		}
 		else {
-			System.out.println("~ Você não está logado! ~");
+			System.out.println("~ VocÃª nÃ£o estÃ¡ logado! ~");
 		}
 	}
 
