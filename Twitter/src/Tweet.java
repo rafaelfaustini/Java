@@ -19,25 +19,42 @@ public class Tweet {
 		this.horario = horario;
 	}
 
-	public void  Tweetar() {
-		Date date = new Date(); 
-		this.horario = date;
-		
-		Scanner dados = new Scanner(System.in);
-		System.out.print("Digite o tweet: ");
-		String tweet = dados.nextLine();
-		
-		if(tweet.length() >= 140)
+	public void  Tweetar(Usuario a1) {
+		String teste = "y";
+		while(teste.equals("y"))
 		{
-			System.out.println("~ Ultrapassou o limite de caracteres! ~");
-		}
-		else
-		{
-			this.texto = tweet;
-			System.out.println("~ Tweet postado! ~");
-			
-		}
+			if(a1.isLogado())
+			{
+				Date date = new Date(); 
+				this.horario = date;
+				
+				Scanner dados = new Scanner(System.in);
+				System.out.print("Digite o tweet: ");
+				String tweet = dados.nextLine();
+				
+				if(tweet.length() >= 140)
+				{
+					System.out.println("~ Ultrapassou o limite de caracteres! ~");
+				}
+				else
+				{
+					Tweet t2 = new Tweet();
+					t2.setTexto(tweet);
+					//this.texto = tweet;
+					a1.adicionarTweet(t2);
+					System.out.println("~ Tweet postado! ~");
+					System.out.print("- Deseja postar mais  -");
+					teste = dados.next();
+					
+				}
+			}
+			else
+			{
+				System.out.println("~ Precisa estar logado para postar ~");
+				
+			}
 		
+		}
 		
 	}
 	
