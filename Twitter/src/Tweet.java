@@ -40,10 +40,11 @@ public class Tweet {
 				{
 					Tweet t2 = new Tweet();
 					t2.setTexto(tweet);
+					t2.setHorario(horario);
 					//this.texto = tweet;
 					a1.adicionarTweet(t2);
 					System.out.println("~ Tweet postado! ~");
-					System.out.print("- Deseja postar mais  -");
+					System.out.print("==== Deseja postar mais ? (y/n): ");
 					teste = dados.next();
 					
 				}
@@ -55,6 +56,7 @@ public class Tweet {
 			}
 		
 		}
+		System.out.println("\r\n");
 		
 	}
 	
