@@ -29,7 +29,7 @@ public class Usuario {
 		if(senha.equals("poo"))
 		{
 			logado = true;
-			System.out.println("~ Login efetuado com sucesso! ~");
+			System.out.println("~ Login efetuado com sucesso como "+nome+"! ~");
 			System.out.println("\r\n");
 		}
 		else
@@ -83,12 +83,12 @@ public class Usuario {
 		if (logado)
 		{
 			tweets.add(novoTweet);
-			System.out.println("\r\n");
+			//System.out.println("\r\n");
 		}
 		else
 		{
 			System.out.println("~ Para postar e necessario logar ~");
-			System.out.println("\r\n");
+			//System.out.println("\r\n");
 		}
 	}
 	public void imprimirTweet(){
@@ -96,9 +96,9 @@ public class Usuario {
 			Tweet t1;
 			t1 = tweets.get(i);
 			System.out.println("~ Tweet #"+i+" "+ t1.getHorario()+" ~");
-			System.out.println(t1.getTexto());
-			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("\r\n");
+			System.out.println("Tweet:"+t1.getTexto());
+			System.out.println("=======================================");
+			//System.out.println("\r\n");
 		}
 		
 	}
