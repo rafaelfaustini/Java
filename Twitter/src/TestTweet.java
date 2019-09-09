@@ -1,4 +1,3 @@
-
 public class TestTweet {
 
 	public static void main(String[] args) {
@@ -6,14 +5,11 @@ public class TestTweet {
 		usuario.setNome("Jose");
 		usuario.setUsuario("@josebolado");
 		
-		//usuario.Login();
+		usuario.Login();
 		
 		Tweet t1 = new Tweet();
-		Tweet t2 = new Tweet();
-		t1.Tweetar();
-		t2.Tweetar();
-		usuario.adicionarTweet(t1);
-		usuario.adicionarTweet(t2);
+		t1.Tweetar(usuario);
+		
 		System.out.println("\r\n");
 		usuario.imprimirTweet();
 		usuario.Logout();
