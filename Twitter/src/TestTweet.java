@@ -9,8 +9,6 @@ public class TestTweet {
 		
 		Tweet t1 = new Tweet();
 		t1.Tweetar(usuario);
-		
-		System.out.println("\r\n");
 		usuario.imprimirTweet();
 		usuario.Logout();
 		
