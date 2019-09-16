@@ -6,7 +6,6 @@ public class Partida_Tester {
 		Time t2 = new Time();
 		Partida p1 = new Partida();
 		
-		
 		t1.setNome("Flamengo");
 		t2.setNome("Vasco");
 		
