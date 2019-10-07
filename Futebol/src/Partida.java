@@ -6,6 +6,10 @@ public class Partida implements IPartida
 	private Time timeVisitante;
 	private Time timeLocal;
 	
+	public Partida(Time visitante, Time local) {
+		this.timeVisitante = visitante;
+		this.timeLocal = local;
+	}
 	
 	public Time getTimeVisitante() {
 		return timeVisitante;
@@ -35,7 +39,7 @@ public class Partida implements IPartida
 	private int scoreLocal;
 	private Date dataPartida;
 	
-	public int Random_Placar(int min, int max)
+	public int randomPlacar(int min, int max)
 	{
 		int numrandom = (int)((Math.random()*((max-min)+1))+min);
 		return numrandom;
@@ -44,14 +48,16 @@ public class Partida implements IPartida
 	@Override
 	public void iniciarPartida() {
 		System.out.println("Partida Iniciando !!");
-		scoreVisitante = Random_Placar(0,10);
-		scoreLocal = Random_Placar(0,10);
+		scoreVisitante = randomPlacar(0,10);
+		scoreLocal = randomPlacar(0,10);
 		
 	}
 
 	@Override
 	public void mostrarResultado() {
-		System.out.println(timeLocal.getNome()+" "+scoreLocal+ " X "+scoreVisitante+" "+timeVisitante.getNome());
+		System.out.printf("%s %d X  %d %s",
+		 timeLocal.getNome(), scoreLocal,
+		scoreVisitante, timeVisitante.getNome());
 	}
 
 	@Override

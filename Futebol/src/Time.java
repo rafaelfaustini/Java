@@ -6,12 +6,16 @@ public class Time {
 	private int qtdDerrotas;
 	private int qtdPontos;
 	
-	void Time()
+	public Time()
 	{
 		qtdVitorias = 0;
 		qtdEmpates  = 0;
 		qtdDerrotas = 0;
 		qtdPontos  = 0;
+	}
+	
+	public Time(String nome) {
+		this.nome = nome;
 	}
 	
 	public int getQtdPontos() {
@@ -49,11 +53,11 @@ public class Time {
 	public void listar()
 	{
 		System.out.println(" ");
-		System.out.println("Time : "+ nome);
-		System.out.println("Vitorias: "+ qtdVitorias);
-		System.out.println("Empates: "+ qtdEmpates);
-		System.out.println("Derrotas: " + qtdDerrotas);
-		System.out.println("Pontos: " + qtdPontos);
+		System.out.printf("Time : %s", nome);
+		System.out.printf("Vitorias: %d", qtdVitorias);
+		System.out.printf("Empates: %d", qtdEmpates);
+		System.out.printf("Derrotas: %d", qtdDerrotas);
+		System.out.printf("Pontos: %d", qtdPontos);
 	}
 	
 }
